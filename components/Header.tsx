@@ -1,9 +1,12 @@
 import react from 'react'
+import Logo from './Logo'
 
 function Header() {
     return(
         <div>
-            Header
+            <nav>
+                <Logo/>
+            </nav>
         </div>
     )
 }
