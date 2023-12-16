@@ -1,6 +1,7 @@
 import react from 'react'
 import Logo from './Logo'
 import DarkModeToggle  from './ui/DarkModeToggle'
+import UserButton from './ui/UserButton'
 
 
 function Header() {
@@ -12,7 +13,7 @@ function Header() {
                     {/*language select*/}
                     {/*session && ...*/}
                     <DarkModeToggle/>
-                    {/*userbutton*/}
+                    <UserButton/>
                 </div>
             </nav>
 
