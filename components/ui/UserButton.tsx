@@ -13,7 +13,7 @@ function UserButton () {
     return (
         <DropdownMenu>
   <DropdownMenuTrigger>
-    <UserAvatar/>
+    <UserAvatar name="krisz kapsa" image="https://github.com/shadcn.png"/>
     Open</DropdownMenuTrigger>
   <DropdownMenuContent>
     <DropdownMenuLabel>My Account</DropdownMenuLabel>
