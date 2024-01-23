@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DemoGif from "../public/demo.gif";
+import DemoGif from "../public/dog1.webp";
 import Image from "next/image";
 
 export default function HomePage() {
