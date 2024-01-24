@@ -1,7 +1,8 @@
-import  CheckIcon, { CheckBadgeIcon } from "@heroicons/react/20/solid"
+import  CheckIcon, { CheckBadgeIcon, CheckCircleIcon } from "@heroicons/react/20/solid"
 import Link from "next/link";
 import CheckoutButton from "./CheckoutButton";
-import { CheckCheckIcon } from "lucide-react";
+
+
 
 const tiers = [
   {
@@ -77,7 +78,7 @@ async function PricingCards({ redirect }: { redirect: boolean }) {
               >
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex gap-x-3">
-                    <CheckCheckIcon
+                    <CheckCircleIcon
                       className="h-6 w-5 flex-none text-indigo-600"
                       aria-hidden="true"
                     />
@@ -87,7 +88,7 @@ async function PricingCards({ redirect }: { redirect: boolean }) {
               </ul>
             </div>
             {/* {tier.id && <CheckoutButton subscriptionId={tier.id} />} */}
-            {redirect ? (
+            {redirect ? ( 
               <Link
                 href="/register"
                 className="mt-8 block rounded-md bg-indigo-600 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer disabled:opacity-80"
@@ -95,7 +96,7 @@ async function PricingCards({ redirect }: { redirect: boolean }) {
                 Get started today
               </Link>
             ) : (
-              tier.id && <CheckoutButton />
+              tier.id && <CheckoutButton/>
             )}
           </div>
         ))}

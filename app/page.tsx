@@ -3,6 +3,7 @@ import DemoGif from "../public/dog1.webp";
 import Image from "next/image";
 
 export default function HomePage() {
+  
   return (
     <div className="">
       <div className="relative isolate pt-14 dark:bg-gray-900">
