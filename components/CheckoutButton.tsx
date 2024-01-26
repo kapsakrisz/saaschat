@@ -1,13 +1,27 @@
 "use client"
 
+import { db } from '@/firebase';
+import { addDoc, collection } from 'firebase/firestore';
 import { useSession } from 'next-auth/react';
-import React from 'react'
+import React, { useState } from 'react'
 
 function CheckoutButton() {
   const {data:session} = useSession();
+  const [loading, setLoading] =useState(false);
 
 const createCheckoutSession = async () => {
-  if(!session) return;
+  if(!session?.user.id) return;
+
+  setLoading(true)
+  const docRef = await addDoc(
+    collection(db, "customers", session.user.id, "checkout_sessions"),
+    {
+      // TODO: Add price
+      price:"price_1Ocu2kDSQAEsk15r2yyuYtHZ",
+      success_url: window.location.origin,
+      cancel_url: window.location.origin,
+    }
+  );
 
 }
 

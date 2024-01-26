@@ -21,9 +21,9 @@ const tiers = [
   },
   {
     name: "Pro",
-    id: "si_OnlcsLNQYbMVzV",
+    id: "Pro",
     href: "#",
-    priceMonthly: "£5.99",
+    priceMonthly: "£0.30",
     description: "Unlock the Full Potential with Pro!",
     features: [
       "Unlimited Messages in Chats",
