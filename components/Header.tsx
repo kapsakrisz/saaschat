@@ -7,6 +7,7 @@ import { authOptions } from '@/auth'
 import Link from 'next/link'
 import { MessagesSquareIcon } from 'lucide-react'
 import CreateChatButton from './CreateChatButton'
+import UpgradeBanner from './ui/UpgradeBanner'
 
 
 async function Header() {
@@ -34,7 +35,7 @@ async function Header() {
                 </div>
             </nav>
 
-            {/*upgrade banner*/}
+            <UpgradeBanner/>
         </header>
     )
 }
