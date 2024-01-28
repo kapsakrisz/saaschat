@@ -31,6 +31,7 @@
     "stripe": "^14.14.0",
     "tailwind-merge": "^2.1.0",
     "tailwindcss-animate": "^1.0.7",
+    "terser": "^5.27.0",
     "zustand": "^4.5.0"
   },
   "devDependencies": {
