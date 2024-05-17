@@ -1,9 +1,8 @@
 import Link from "next/link";
-import DemoGif from "../public/dog1.webp";
+import DemoGif from "@/images/landingPage/demo.gif";
 import Image from "next/image";
 
 export default function HomePage() {
-  
   return (
     <div className="">
       <div className="relative isolate pt-14 dark:bg-gray-900">
@@ -24,7 +23,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-                Chat with Anyone, Csuntinooo!
+                Chat with Anyone, anywhere!
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
                 You speak your language, they speak their language.{" "}

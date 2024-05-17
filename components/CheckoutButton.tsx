@@ -1,12 +1,14 @@
-"use client"
+"use client";
 
-import { db } from '@/firebase';
-import { addDoc, collection, onSnapshot } from 'firebase/firestore';
-import { useSession } from 'next-auth/react';
-import React, { useState } from 'react'
-import LoadingSpinner from './ui/LoadingSpinner';
-import { useSubscriptionStore } from '@/store/store';
-import ManageAccountButton from './ui/ManageAccountButton';
+import { db } from "@/firebase";
+import { addDoc, collection, onSnapshot } from "firebase/firestore";
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
+
+import { useSubscriptionStore } from "@/store/store";
+import ManageAccountButton from "./ManageAccountButton";
+import { useSession } from "next-auth/react";
+import LoadingSpinner from "./loadingSpinner";
 
 function CheckoutButton() {
   const [loading, setLoading] = useState(false);
@@ -28,7 +30,7 @@ function CheckoutButton() {
       collection(db, "customers", session.user.id, "checkout_sessions"),
       {
         // TODO: Add price
-        price: "price_1OdBiBDSQAEsk15rTF9jrX61",
+        price: process.env.NEXT_PUBLIC_STRIPE_PRODUCT_PRICE_ID,
         success_url: window.location.origin,
         cancel_url: window.location.origin,
       }

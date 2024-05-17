@@ -1,24 +1,21 @@
-"use client"
-
+"use client";
 
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
-import UserAvatar from "./UserAvatar"
-import { Session } from "next-auth"
-import { Button } from "./button"
-import { signIn, signOut } from "next-auth/react"
-
-import { useSubscriptionStore } from "@/store/store"
-import LoadingSpinner from "./LoadingSpinner"
-import { StarIcon } from "lucide-react"
-import ManageAccountButton from "./ManageAccountButton"
-  
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { signIn, signOut } from "next-auth/react";
+import { Button } from "./ui/button";
+import { Session } from "next-auth";
+import ManageAccountButton from "./ManageAccountButton";
+import { useSubscriptionStore } from "@/store/store";
+import LoadingSpinner from "./loadingSpinner";
+import { StarIcon } from "lucide-react";
+import UserAvatar from "./UserAvatar";
 
 function UserButton({ session }: { session: Session | null }) {
   const subscription = useSubscriptionStore((state) => state.subscription);

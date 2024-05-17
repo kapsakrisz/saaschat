@@ -1,21 +1,25 @@
+// Import the functions you need from the SDKs you need
 import { getApp, getApps, initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getFunctions } from "firebase/functions";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAZGocpR7uQX4VmQdjQLYOOiuM2MLYFoHI",
-    authDomain: "saas-translator-4de30.firebaseapp.com",
-    projectId: "saas-translator-4de30",
-    storageBucket: "saas-translator-4de30.appspot.com",
-    messagingSenderId: "482708389337",
-    appId: "1:482708389337:web:f8d8e8f3726c518d182dc8"
-  };
+  apiKey: "AIzaSyABsnTyybAEu_iBcYi4RGBVEAeElsnhgPI",
+  authDomain: "ai-translator-chat.firebaseapp.com",
+  projectId: "ai-translator-chat",
+  storageBucket: "ai-translator-chat.appspot.com",
+  messagingSenderId: "297674687117",
+  appId: "1:297674687117:web:0da8856e5a14f3e1a958c4",
+};
 
-  const app= getApps().length ? getApp () : initializeApp(firebaseConfig);
-  const auth=getAuth(app);
-  const db=getFirestore(app);
-  const functions= getFunctions(app);
+// Initialize Firebase
+const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
+const functions = getFunctions(app);
 
-  export {db,auth,functions};
+export { db, auth, functions };

@@ -1,9 +1,6 @@
-import  CheckIcon, { CheckBadgeIcon, CheckCircleIcon } from "@heroicons/react/20/solid"
+import { CheckIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import CheckoutButton from "./CheckoutButton";
-import { CheckCheckIcon } from "lucide-react";
-
-
 
 const tiers = [
   {
@@ -22,7 +19,7 @@ const tiers = [
   },
   {
     name: "Pro",
-    id: "pro",
+    id: "si_OnlcsLNQYbMVzV",
     href: "#",
     priceMonthly: "£5.99",
     description: "Unlock the Full Potential with Pro!",
@@ -79,7 +76,7 @@ async function PricingCards({ redirect }: { redirect: boolean }) {
               >
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex gap-x-3">
-                    <CheckCheckIcon
+                    <CheckIcon
                       className="h-6 w-5 flex-none text-indigo-600"
                       aria-hidden="true"
                     />
@@ -107,4 +104,3 @@ async function PricingCards({ redirect }: { redirect: boolean }) {
 }
 
 export default PricingCards;
-

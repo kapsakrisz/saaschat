@@ -1,5 +1,3 @@
-
-
 import type {
   GetServerSidePropsContext,
   NextApiRequest,
@@ -10,12 +8,9 @@ import { getServerSession } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { FirestoreAdapter } from "@auth/firebase-adapter";
 import { adminAuth, adminDb } from "./firebase-admin";
-import { firestore } from "firebase-admin";
-import { Adapter } from "next-auth/adapters";
 
 // You'll need to import and pass this
 // to `NextAuth` in `app/api/auth/[...nextauth]/route.ts`
-//@ts-expect-error
 export const authOptions: NextAuthOptions = {
   providers: [
     GoogleProvider({
@@ -51,7 +46,6 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
-  //@ts-expect-error
   adapter: FirestoreAdapter(adminDb),
 } satisfies NextAuthOptions;
 

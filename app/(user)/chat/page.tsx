@@ -1,18 +1,25 @@
-import ChatList from "@/components/ui/ChatList";
+import ChatList from "@/components/ChatList";
+import ChatPermissionError from "@/components/ChatPermissionError";
 
 type Props = {
-    params:{};
-    searchParams: {
-        error:string;
-    }
+  params: {};
+  searchParams: {
+    error: string;
+  };
 };
 
-function chatsPage({searchParams:{error}}:Props) {
+async function App({ searchParams: { error } }: Props) {
   return (
     <div>
-      <ChatList/>
+      {error && (
+        <div className="m-2">
+          <ChatPermissionError />
+        </div>
+      )}
+
+      <ChatList />
     </div>
-  )
+  );
 }
 
-export default chatsPage
+export default App;
